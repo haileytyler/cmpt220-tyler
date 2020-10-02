@@ -10,7 +10,7 @@ public class Problem3 {
         double random_y = Math.random() * (max-min+1) + min;
 
          // Check to see if the point is in the circle and generate a new one if it is not:
-         while (Math.pow(random_x,2) + Math.pow(random_y,2) >= 25){
+         while (Math.pow(random_x,2) + Math.pow(random_y,2) >= 25){ // You can do this without a while loop
             random_x = Math.random() * (max-min+1) + min;
             random_y = Math.random() * (max-min+1) + min;
          }
