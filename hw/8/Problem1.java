@@ -16,25 +16,25 @@ public class Problem1 {
 
         // Answer:
         ArrayList<String> list = new ArrayList<String>();
-        list = split(input_string, input_delimiters);
+        list = split(input_string, input_delimiters); // save answer into an array list
         
-        System.out.println("There are " + list.size() + " pieces: ");
+        System.out.println("There are " + list.size() + " pieces: "); // print out the array list
         for (int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i) + " ");
         }
         System.out.println();
     }
     public static ArrayList<String> split(String s, String delimiters) {
-        String cur_piece = "";
+        String cur_piece = ""; // current piece
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < s.length(); i++) {
-            if(delimiters.indexOf(s.charAt(i)) >= 0) {
-                list.add(cur_piece);
-                cur_piece = "";
+        for (int i = 0; i < s.length(); i++) { // iterate through the string
+            if(delimiters.indexOf(s.charAt(i)) >= 0) { // find a delimeter in the string
+                list.add(cur_piece); // add the current piece to list
+                cur_piece = ""; // reset the piece
             }
-            else cur_piece += s.charAt(i);
+            else cur_piece += s.charAt(i); // if no delimeter is found it returns -1 and then adds the character to the current piece
         }
-        if (cur_piece.length() > 0) list.add(cur_piece);
+        if (cur_piece.length() > 0) list.add(cur_piece); // adds the last piece to the list
         return list;
     }
 }

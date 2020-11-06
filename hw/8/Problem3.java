@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 public class Problem3 {
     public static void main(String[] args) {
+        // Program that has a flight class that stores the information and an Itinerary class
+
         ArrayList<Flight> flights = new ArrayList<Flight>();
         flights.add(new Flight("US230",
         new GregorianCalendar(2014, 4, 5, 5, 5, 0),
@@ -12,7 +14,7 @@ public class Problem3 {
         new GregorianCalendar(2014, 4, 5, 7, 45, 0))); // 50 minutes
         flights.add(new Flight("US237",
         new GregorianCalendar(2014, 4, 5, 9, 35, 0), // 110 minutes b/t flights
-        new GregorianCalendar(2014, 4, 5, 12, 55, 0))); // 3 hours = 180 minutes
+        new GregorianCalendar(2014, 4, 5, 12, 55, 0))); // 3 hours and 20 minutes = 200 minutes
 
         Itinerary itinerary = new Itinerary(flights);
         System.out.println(itinerary.getTotalTravelTime());
@@ -20,7 +22,7 @@ public class Problem3 {
     }
 }
 class Flight {
-    // 
+    // data fields
     private String flightNo;
     private  GregorianCalendar departureTime;
     private GregorianCalendar arrivalTime;
@@ -59,7 +61,7 @@ class Flight {
     }
 }
 class Itinerary {
-    //
+    // data fields
     ArrayList<Flight> flights;
     // contruct an itinerary object
     Itinerary (){
@@ -68,7 +70,7 @@ class Itinerary {
     Itinerary (ArrayList<Flight> newFlights) {
         flights = newFlights;
     }
-    // 
+    // get the total flight time
     long getTotalFlightTime() {
         long TotalFlightTime = 0;
         for (int i = 0; i < flights.size(); i++) {
@@ -76,7 +78,7 @@ class Itinerary {
         }
         return TotalFlightTime;
     }
-    //
+    // get the total travel time
     long getTotalTravelTime() {
         Flight firstFlight = flights.get(0);
         Flight lastFlight = flights.get(flights.size() - 1);

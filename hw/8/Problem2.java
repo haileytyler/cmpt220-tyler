@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Problem2 {
     public static void main(String[] args) {
-        // Method that splits a string into substrings using delimiter characters
+        // Method that packs bins of various weights into containers with capacities of 10 pounds
 
         // Create a scanner object
         Scanner input = new Scanner(System.in);
