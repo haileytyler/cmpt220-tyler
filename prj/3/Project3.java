@@ -58,7 +58,7 @@ public class Project3 {
                 return names.get(i); // return matched BabyName
             }
         }
-        throw new Exception("The name " + name + " is not ranked in year " + year); // throw exception for a name that is not ranked in the given year
+        throw new Exception("The name " + name + "(" + gender + ") is not ranked in year " + year); // throw exception for a name that is not ranked in the given year
     }
 }
 class BabyName {
